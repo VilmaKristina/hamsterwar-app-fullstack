@@ -9,7 +9,6 @@ export default function Home() {
       .then((response) => {
         console.log(response);
         if (!response.ok) {
-          console.log(response);
           throw Error("Sidan kunde inte hittas....");
         }
         return response;
