@@ -1,0 +1,447 @@
+.App {
+  text-align: center;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 5px 8px 14px #825f5f;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-block-end: 0.2em;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url(/public/images/appimages/running-hamster.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.server-error {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 10% auto;
+}
+
+.server-error button {
+  max-width: 200px;
+}
+
+.home-icon {
+  font-size: 36px;
+  color: rgb(81, 77, 77);
+}
+
+.main-body {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.home-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-bottom: 1.2rem;
+  width: 80%;
+}
+
+.home-body {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 30px;
+  padding: 2%;
+}
+
+.battle-body {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.2rem;
+}
+
+.home-btn {
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Battle sidan*/
+
+.random-hamster-container {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  margin: 0 auto;
+  margin-bottom: 7%;
+}
+
+.one-random-hamster {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
+  border: 1px solid rgb(228, 227, 227);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 2%;
+  opacity: 0.8;
+  padding: 1%;
+  margin: 30px auto;
+}
+
+.battle-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  padding: 10px;
+}
+
+.vinnare-image {
+  max-width: 250px;
+  border-radius: 10px;
+}
+
+.loser-image {
+  max-width: 150px;
+  border-radius: 10px;
+}
+
+.loser-container {
+  filter: brightness(90%);
+  background-color: rgba(180, 170, 170, 0.4);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.winner-container {
+  border-radius: 10px;
+  padding: 15px;
+  border: 2px solid grey;
+  border: 1px solid rgb(228, 227, 227);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.winner-container h2 {
+  font-size: 1.5rem;
+  color: green;
+}
+
+.match-result {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  margin: 0 auto;
+}
+
+/* Gallery sidan*/
+
+.main-header {
+  background-color: rgb(235, 222, 206);
+}
+
+.gallery-header {
+  display: flex;
+  padding: 2%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 1.2rem;
+  width: 80%;
+}
+
+.btn-add-hamster {
+  border: 1px solid grey;
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-add-links {
+  min-width: 150px;
+  border: 1px solid grey;
+  padding: 8px;
+  font-size: 1.8rem;
+  border-radius: 6px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-refresh {
+  border: 1px solid grey;
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-main:hover,
+.more-info:hover,
+.btn-add-links:hover,
+.btn-add-hamster:hover,
+.btn-refresh:hover {
+  background-color: black;
+  color: wheat;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.all-hamsters-container {
+  display: grid;
+  grid-gap: 1.8rem;
+}
+
+.one-hamster-container {
+  background-color: antiquewhite;
+  border: 1px solid rgb(228, 227, 227);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 2%;
+  padding: 6%;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 25px;
+}
+
+.more-info {
+  border: 1px solid grey;
+  font-size: 1rem;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: rgb(202, 194, 194);
+}
+
+.btn-close {
+  border: none;
+  background-color: transparent;
+  font-size: 1.7rem;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+
+.btn-close:hover {
+  opacity: 0.6;
+  border-radius: 6px;
+  background-color: rgb(165, 131, 87);
+}
+
+.gallery-image-container,
+.one-random-hamster {
+  display: block;
+  width: 50%;
+  max-width: 50%;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Add Hamster sidan*/
+.hamster-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: rgb(250, 235, 215, 0.6);
+  border-radius: 12px;
+  margin: 0 auto;
+  width: 60%;
+  padding: 12px;
+}
+
+.hamster-form input {
+  font-size: 1rem;
+  padding: 6px 6px 6px 10px;
+  border-radius: 6px;
+  border: 1px solid green;
+}
+
+.field-error,
+.added-image h3 {
+  color: rgb(241, 60, 60);
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+.upload-image {
+  display: block;
+  width: 35%;
+  margin-bottom: 5px;
+}
+
+.added-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-input {
+  max-width: 150px;
+}
+
+.btn-upload-image {
+  border: 1px solid grey;
+  padding: 8px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-upload-image:hover {
+  background-color: rgb(242, 171, 50);
+  color: rgb(245, 241, 233);
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.added-hamster-name {
+  color: green;
+  font-size: 2rem;
+}
+
+.add-confirmation {
+  margin-top: 8%;
+  font-size: 1.2rem;
+}
+
+.add-confirmation p {
+  line-height: 2rem;
+}
+
+/* Single hamster */
+.single-hamster-container {
+  border: 1px solid rgb(183, 159, 159);
+  border-radius: 10px;
+  gap: 20px;
+  align-items: center;
+  max-width: 40%;
+  margin: 2% auto;
+  padding: 20px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.image-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.one-hamster-details {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-evenly;
+  gap: 20px;
+  padding: 10px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  border: 1px solid rgb(228, 227, 227);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+.one-hamster-details div {
+  font-size: 1.2rem;
+}
+
+.game-details article {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-image-container {
+  display: block;
+  width: 40%;
+  max-width: 40%;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  background-color: antiquewhite;
+  border: 1px solid rgb(228, 227, 227);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+@media (min-width: 768px) {
+  .all-hamsters-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .hamster-form {
+    width: 85%;
+  }
+  .match-result {
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 10%;
+  }
+
+  .random-hamster-container {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .battle-body {
+    width: 100%;
+  }
+
+  .single-hamster-container{
+    max-width: 75%;
+  }
+}
+
+@media (min-width: 960px) {
+  .all-hamsters-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .all-hamsters-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
